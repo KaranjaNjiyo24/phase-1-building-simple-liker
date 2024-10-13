@@ -9,8 +9,16 @@ document.addEventListener('DOMContentLoaded', () => {
   hearts.forEach(heart => {
     heart.addEventListener('click', () => {
       //alert('I am clicked!') //To confirm the clicker is working
-      //Invoke mimicServerCall to simulate making a server request
-
+      mimicServerCall()//Invoke mimicServerCall to simulate making a server request
+      .then(() => {
+        if (heart.textContent === EMPTY_HEART) {
+          heart.textContent =FULL_HEART;
+          heart.classList.add('activated-heart')
+        }else {
+          heart.textContent === FULL_HEART;
+          heart.classList.remove('activated-heart')
+        }
+      })
     })
   })
 

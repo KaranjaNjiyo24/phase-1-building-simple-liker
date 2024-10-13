@@ -5,6 +5,8 @@ const FULL_HEART = '♥'
 // Your JavaScript code goes here!
 document.addEventListener('DOMContentLoaded', () => {
   const hearts = document.querySelectorAll('.like-glyph');
+  const modal = document.getElementById('modal');
+  const 
 
   hearts.forEach(heart => {
     heart.addEventListener('click', () => {
@@ -18,6 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
           heart.textContent === FULL_HEART;
           heart.classList.remove('activated-heart')
         }
+      })
+      .catch(error => {
+        modal.classList.remove('hidden');
+        
       })
     })
   })

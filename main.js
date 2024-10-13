@@ -6,7 +6,7 @@ const FULL_HEART = '♥'
 document.addEventListener('DOMContentLoaded', () => {
   const hearts = document.querySelectorAll('.like-glyph');
   const modal = document.getElementById('modal');
-  const 
+
 
   hearts.forEach(heart => {
     heart.addEventListener('click', () => {
@@ -23,7 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .catch(() => {
         modal.classList.remove('hidden');
-        
+        setTimeout(() => {
+          modal.classList.add('hidden');
+        }, 3000)
       })
     })
   })

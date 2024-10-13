@@ -6,6 +6,15 @@ const FULL_HEART = '♥'
 document.addEventListener('DOMContentLoaded', () => {
   const hearts = document.querySelectorAll('.like-glyph');
 
+  hearts.forEach(heart => {
+    heart.addEventListener('click', () => {
+      //alert('I am clicked!') //To confirm the clicker is working
+      //Invoke mimicServerCall to simulate making a server request
+
+    })
+  })
+
+
 })
 
 

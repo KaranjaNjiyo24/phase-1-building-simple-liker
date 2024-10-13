@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
           heart.classList.remove('activated-heart')
         }
       })
-      .catch(error => {
+      .catch(() => {
         modal.classList.remove('hidden');
         
       })
